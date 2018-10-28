@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>The book of answers</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/stylish-portfolio.min.css" rel="stylesheet">
+
+    <!-- The function written by student Yedan-->
+    <script>
+    function find_answers(){
+    var answers= new Array()
+    answers[0]="Trust your intuition.";
+    answers[1]="Be patient.";
+    answers[2]="Be brave and go ahead.";
+    answers[3]="You'll have to compromise.";
+    answers[4]="Yes";
+    answers[5]="No";
+    answers[6]="Think twice";
+    answers[7]="Don’t bet on it.";
+    answers[8]="Belive in yourself.";
+    answers[9]="Of course.";
+    answers[10]="Be more prepared.";
+    answers[11]="As you wish.";
+    answers[12]="Fllow your heart.";
+    answers[13]="Wait";
+    answers[14]="You may go through hardships.";
+    answers[15]="Try asking for help.";
+    answers[16]="Whatever you do the results will be lasting.";
+    answers[17]="You did great a job.";
+    answers[18]="Keep on trying.";
+    answers[19]="Don't give up.";
+    answers[20]="The future is bright.";
+    var str= Math.floor(Math.random()*21);
+    document.getElementById("answer").innerHTML = answers[str]; 
+    }
+    </script>
+
+  </head>
+
+ <body>
+   <div align="right" style="color:red" ><h7> Click this button&nbsp; &nbsp; &nbsp;  &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp;  &nbsp;&nbsp; &nbsp;  </h7></div>
+
+   <!-- Navigation -->
+   <a class="menu-toggle rounded" href="#">
+     <i class="fas fa-bars"></i>
+   </a>
+   <nav id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+    <li class="sidebar-brand" style= "color:white;font-size:25px;">
+    How to play
+    </li>
+    <div style= "color:white;font-size:18px;padding-left:12px;padding-right:5px;line-height:30px;">
+    <li class="sidebar-nav-item">
+    <br>
+    1. Ask a closed-ended question in your mind, like:"should I continue studying JavaScript?"
+    <br>
+    </li>
+    <li class="sidebar-nav-item">
+    <br>
+    2. Clear your mind and focus on that question for 3 seconds.
+    </li>
+    <li class="sidebar-nav-item">
+    <br>
+    3. Click "Get your answers" to see what you should do.
+    </li>
+   </div>
+     </ul>
+   </nav>
+
+    <!-- Header -->
+    <header class="masthead d-flex">
+    <div class="container text-center my-auto">
+    <h1 class="mb-1">&nbsp;&nbsp;&nbsp; The Book of Answers</h1>
+    <h3 class="mb-5">
+    <em>ask your questions</em>
+    </h3>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" onclick="find_answers();">
+    Get   your  answers
+    </button>
+
+    <!-- Another Bootstrap model I find to make the alert window prettier-->
+    <div class="modal" id="myModal">
+    <div class="modal-dialog">
+    <div class="modal-content">
+
+    <div class="modal-header">
+    <h5 class="modal-title">Your answer is</h5>
+    </div>
+
+    <div class="modal-body" id="answer" style="font-size:30px;">
+    </div>
+
+    <div class="modal-footer">
+    <button type="button" class="btn btn-primary" data-dismiss="modal">Ask more questions</button>
+    </div>
+
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="overlay"></div>
+    </header>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/stylish-portfolio.min.js"></script>
+
+  </body>
+
+</html>
