@@ -9,7 +9,7 @@ $("button#roll_up").click(function() {
                   table1_items = [];
                       table1_items.push(value.fields.Program________);
                       table1_items.push(value.fields.Genre);
-                      table1_items.push(value.fields.Platform);
+                      table1_items.push(value.fields.Platform_____);
                       table1_items.push(value.fields.Highest_Daily_View_Counts_in_thousand);
                       table1_items.push(value.fields.Accelerated_View_Counts_in_thousand);
                       table1_items.push(value.fields.Launched_Period);
@@ -27,7 +27,7 @@ $("button#roll_up").click(function() {
                       defaultContent:""},
                     { title: "Genre",
                         defaultContent:"" },
-                    { title: "Platform",
+                    { title: "Platform_____",
                       defaultContent:"" },
                     { title: "Highest_Daily_View_Counts_in_thousand",
                       defaultContent:""},
