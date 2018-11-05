@@ -38,7 +38,7 @@ $("button#roll_up").click(function() {
                     { title: "Average_View_Counts_Per_Day",
                         defaultContent:""},
                 ]
-            } );
-       }); // end .getJSON
-    }); // end button
+            } ); // end dataTable
+          }); // end .getJSON
+       }); // end button
     }); // document ready
