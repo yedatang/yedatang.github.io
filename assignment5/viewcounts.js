@@ -40,24 +40,50 @@ $("button#roll_up").click(function() {
                 ]
             } ); // end dataTable
           }); // end .getJSON
+          var table2_items = [];
+        var i = 0;
+        var airtable_read_endpoint =
+        "https://api.airtable.com/v0/app4rsP3D3T0zzIEh/Platform%20AVC%20Rollup?api_key=keyE2Q3CSRHLNZqT8";
+        var table2_dataSet = [];
+        $.getJSON(airtable_read_endpoint, function(result) {
+               $.each(result.records, function(key,value) {
+                   table2_items = [];
+                       table2_items.push(value.fields.Platform);
+                       table2_items.push(value.fields.Average_Accelerated_View_Counts_in_thousand);
+                       table2_dataSet.push(table2_items);
+                       console.log(table2_items);
+                }); // end .each
+                console.log(table2_dataSet);
+               $('#table2').DataTable( {
+                   data: table2_dataSet,
+                   retrieve: true,
+                   ordering: false,
+                   columns: [
+                       { title: "Platform",
+                         defaultContent:""},
+                      { title: "Average_Accelerated_View_Counts_in_thousand)",
+                           defaultContent:""},
+                   ] // rmf columns
+               } ); // end dataTable
 
-          var chart = c3.generate({
-          data: {
-          columns: [
-            ['data1', 30, 200, 100, 400, 150, 250],
-            ['data2', 50, 20, 10, 40, 15, 25]
-        ],
-          axes: {
-          data1: 'y',
-          data2: 'y2'
-        }
-    },
-          axis: {
-          y2: {
-          show: true
-        }
-    }
-});
 
-       }); // end button
+                   var chart = c3.generate({
+                    data: {
+                    columns: table2_dataSet,
+                    type : 'bar'
+                    },
+                    axis: {
+                    x: {label: 'Platform'},
+                    y: {label: 'Average Accelerated View Counts(thousand)',
+                        max: 2500000,
+                        min: 1500000,}
+                    },
+                    bar: {
+                    title: "Average View Counts(thousand) for Two Platfroms:",
+                                    }
+                                });
+
+
+         }); // end .getJSON
+      }); // end button
     }); // document ready
