@@ -13,7 +13,7 @@ $("button#roll_up").click(function() {
                       table1_items.push(value.fields.Highest_Daily_View_Counts_in_thousand);
                       table1_items.push(value.fields.Accelerated_View_Counts_in_thousand);
                       table1_items.push(value.fields.Launched_Period);
-                      table1_items.push(value.fields.Average_View_Counts_Per_Day);
+                      table1_items.push(value.fields.Average_View_Counts_Per_Day_in_thousand);
                       table1_dataSet.push(table1_items);
                       console.log(table1_items);
                }); // end .each
@@ -23,19 +23,19 @@ $("button#roll_up").click(function() {
                 data: table1_dataSet,
                 retrieve: true,
                 columns: [
-                    { title: "Program________",
+                    { title: "Program                                     ",
                       defaultContent:""},
                     { title: "Genre",
                         defaultContent:"" },
-                    { title: "Platform_____",
+                    { title: "Platform                                    ",
                       defaultContent:"" },
-                    { title: "Highest_Daily_View_Counts_in_thousand",
+                    { title: "Highest Daily View Counts in thousand",
                       defaultContent:""},
-                    { title: "Accelerated_View_Counts_in_thousand",
+                    { title: "Accelerated View Counts in thousand",
                         defaultContent:""},
-                    { title: "Launched_Period",
+                    { title: "Launched Period",
                       defaultContent:""},
-                    { title: "Average_View_Counts_Per_Day",
+                    { title: "Average View Counts Per Day in thousand",
                         defaultContent:""},
                 ]
             } ); // end dataTable
@@ -49,7 +49,7 @@ $("button#roll_up").click(function() {
                $.each(result.records, function(key,value) {
                    table2_items = [];
                        table2_items.push(value.fields.Platform);
-                       table2_items.push(value.fields.Average_Accelerated_View_Counts_in_thousand);
+                       table2_items.push(value.fields.Average_Accelerated_View_Counts_in_million);
                        table2_dataSet.push(table2_items);
                        console.log(table2_items);
                 }); // end .each
@@ -59,9 +59,9 @@ $("button#roll_up").click(function() {
                    retrieve: true,
                    ordering: false,
                    columns: [
-                       { title: "Platform",
+                       { title: "Program",
                          defaultContent:""},
-                      { title: "Average_Accelerated_View_Counts_in_thousand)",
+                      { title: "Average Accelerated View Counts in Millon",
                            defaultContent:""},
                    ] // rmf columns
                } ); // end dataTable
@@ -74,12 +74,14 @@ $("button#roll_up").click(function() {
                     },
                     axis: {
                     x: {label: 'Platform'},
-                    y: {label: 'Average Accelerated View Counts(thousand)',
-                        max: 2500000,
-                        min: 1500000,}
+                    y: {label: 'Average Accelerated View Counts (million)',
+                    max: 2500,
+                    min: 0,}
                     },
+
                     bar: {
-                    title: "Average View Counts(thousand) for Two Platfroms:",
+                      width:100,
+                      title: "Average Accelerated View Counts(millon) for Two Platfroms:",
                                     }
                                 });
 
