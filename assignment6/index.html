@@ -36,6 +36,22 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=p
   id: 'mapbox.streets',
   accessToken: 'pk.eyJ1IjoieWVkZGEiLCJhIjoiY2pvZHg3OXVqMHVndzNrbGY5Y2hrYjgwMSJ9.LlDnLQBn5SMrS5IAVQDIPQ'
 }).addTo(mymap);
+var orangeIcon = L.icon({
+    iconUrl: 'orange.png',
+    iconSize:[70, 65], // size of the icon
+});
+var redIcon = L.icon({
+    iconUrl: 'red.png',
+    iconSize:[20,30], // size of the icon
+});
+var blueIcon = L.icon({
+    iconUrl: 'blue.png',
+    iconSize:[70,65], // size of the icon
+});
+var pinkIcon = L.icon({
+    iconUrl: 'pink.png',
+    iconSize:[70,65], // size of the icon
+});
 var items = [];
 var airtable_read_endpoint = "https://api.airtable.com/v0/app0DGCSyNtDTJl9R/hkfood-GD?api_key=keyE2Q3CSRHLNZqT8";
 var data1 = [];
@@ -124,7 +140,7 @@ var polygon = L.polygon([
     [22.280198,114.15446],
     [22.2814166,114.1466795]
 ]).addTo(mymap);
-polygon.bindPopup("Central").openPopup();
+polygon.bindPopup("Central");
 
 </script>
 
@@ -132,7 +148,7 @@ polygon.bindPopup("Central").openPopup();
 function show_GD(){
   for (var i in data1) {
       var latlng = L.latLng({ lat: data1[i].latitud, lng: data1[i].longitud });
-      var marker = L.marker( latlng )
+      var marker = L.marker(latlng,{icon:orangeIcon})
           .bindPopup( '<a href="' + data1[i].url + '" target="_blank">' + '<img src="' + data1[i].image_url+'" width = "150px"><br>'+data1[i].name +'<br>'+ '</a>'+data1[i].Foodtype+'<br>'+data1[i].Likes)
           .addTo(mymap);
   }
@@ -141,7 +157,7 @@ function show_GD(){
 function show_JP(){
   for (var i in data2) {
       var latlng = L.latLng({ lat: data2[i].latitud, lng: data2[i].longitud });
-      var marker = L.marker( latlng )
+      var marker = L.marker( latlng,{icon:redIcon})
           .bindPopup( '<a href="' + data2[i].url + '" target="_blank">' + '<img src="' + data2[i].image_url+'" width = "150px"><br>'+data2[i].name +'<br>'+ '</a>'+data2[i].Foodtype+'<br>'+data2[i].Likes)
           .addTo(mymap);
   }
@@ -150,7 +166,7 @@ function show_JP(){
 function show_KO(){
   for (var i in data3) {
       var latlng = L.latLng({ lat: data3[i].latitud, lng: data3[i].longitud });
-      var marker = L.marker( latlng )
+      var marker = L.marker( latlng,{icon:blueIcon} )
           .bindPopup( '<a href="' + data3[i].url + '" target="_blank">' + '<img src="' + data3[i].image_url+'" width = "150px"><br>'+data3[i].name +'<br>'+ '</a>'+data3[i].Foodtype+'<br>'+data3[i].Likes)
           .addTo(mymap);
   }
@@ -159,7 +175,7 @@ function show_KO(){
 function show_WE(){
   for (var i in data4) {
       var latlng = L.latLng({ lat: data4[i].latitud, lng: data4[i].longitud });
-      var marker = L.marker( latlng )
+      var marker = L.marker( latlng,{icon:pinkIcon}  )
           .bindPopup( '<a href="' + data4[i].url + '" target="_blank">' + '<img src="' + data4[i].image_url+'" width = "150px"><br>'+data4[i].name +'<br>'+ '</a>'+data4[i].Foodtype+'<br>'+data4[i].Likes)
           .addTo(mymap);
   }
