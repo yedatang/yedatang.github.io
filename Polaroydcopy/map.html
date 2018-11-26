@@ -21,7 +21,6 @@
   <!-- Libraries CSS Files -->
   <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
   <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
-  <link href="lib/photostack/photostack.css" rel="stylesheet">
   <link href="lib/fullpage-menu/fullpage-menu.css" rel="stylesheet">
   <link href="lib/cubeportfolio/cubeportfolio.css" rel="stylesheet">
   <link href="lib/superslides/superslides.css" rel="stylesheet">
@@ -115,31 +114,39 @@
 
 
   <div class="container">
-    <div class="row mt3 presentation">
-      <div class="centered">
-        <i class="icon ion-ios7-cog-outline large-icon"></i>
-        <h1>Find Bookstores</h1>
-        <hr>
-      </div>
-      <div class="col-lg-4 col-md-4">
-        <h3>Our Methodology</h3>
-      </div>
+      <section id="slides">
+        <ul class="slides-container">
+          <li>
+            <img src="img/slide-1.jpg" alt="">
+          </li>
+          <li>
+            <img src="img/slide-2.jpg" alt="">
+          </li>
+          <li>
+            <img src="img/slide-3.jpg" alt="">
+          </li>
+        </ul>
+        <div id="bannertext">
+          <h3>A Truly Handsome Bootstrap 3 Theme</h3>
+          <h1>HIGH QUALITY</h1>
+        </div>
+        <!-- end:Banner text -->
+        <nav class="slides-navigation">
+          <a href="index2.html#" class="next">
+                <i class="fa fa-angle-right"></i>
+                </a>
+          <a href="index2.html#" class="prev">
+                <i class="fa fa-angle-left"></i>
+                </a>
+        </nav>
+      </section>
 
-      <div class="col-lg-4 col-md-4">
-        <p>Dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since, when an unknown ristique senectus et netus.</p>
-      </div>
+      <iframe class="airtable-embed" src="https://airtable.com/embed/shrsRgEyQjexYLSlv?backgroundColor=orange" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent;"></iframe>
 
-      <div class="col-lg-4 col-md-4">
-        <p>坐标的几个图不在文件夹里所以看不到坐标，但功能是对的</p>
-      </div>
-    </div>
     <!-- /row -->
-    <body>
       <div class="container">
         <div class="row">
           <div class="col-xs-12 col-sm-12 col-md-12">
-            <h1>Hong Kong Restaurants</h1>
-            <p>Data from Openrice</p>
               <button type="button" class="btn btn-warning" id='roll_up' onclick="show_GD();">Guangdong Food</button>
               <button type="button" class="btn btn-warning" id='roll_up' onclick="show_JP();">Japanese Food</button>
               <button type="button" class="btn btn-warning" id='roll_up' onclick="show_KO();">Korean Food</button>
@@ -316,24 +323,6 @@
     </div>
   </div>
 
-  <section id="contact" class="section-bg-color mt2">
-    <div class="container centered ptb">
-      <div class="col-md-2 col-md-offset-1">
-        <i class="icon ion-ios7-location-outline large-icon"></i>
-        <h5>HEAD OFFICE</h5>
-        <p>902 Main Street, MVD, UY.</p>
-      </div>
-      <div class="col-md-2 col-md-offset-2">
-        <i class="icon ion-ios7-telephone-outline large-icon"></i>
-        <h5>CALL US</h5>
-        <p>(598) 123-4567</p>
-      </div>
-      <div class="col-md-2 col-md-offset-2">
-        <i class="icon ion-ios7-paperplane-outline large-icon"></i>
-        <h5>QUERIES</h5>
-        <p>support@mail.com</p>
-      </div>
-    </div>
   </section>
 
   <section id="end" class="section-footer">
@@ -369,7 +358,6 @@
   <script src="lib/cubeportfolio/cubeportfolio.js"></script>
   <script src="lib/classie/classie.js"></script>
   <script src="lib/fullpage-menu/fullpage-menu.js"></script>
-  <script src="lib/photostack/photostack.js"></script>
   <script src="lib/superslides/superslides.js"></script>
 
   <!-- Template Main Javascript File -->

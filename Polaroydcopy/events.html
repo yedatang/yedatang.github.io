@@ -20,7 +20,6 @@
   <!-- Libraries CSS Files -->
   <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
   <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
-  <link href="lib/photostack/photostack.css" rel="stylesheet">
   <link href="lib/fullpage-menu/fullpage-menu.css" rel="stylesheet">
   <link href="lib/cubeportfolio/cubeportfolio.css" rel="stylesheet">
   <link href="lib/superslides/superslides.css" rel="stylesheet">
@@ -28,12 +27,18 @@
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
 
-  <!-- =======================================================
-    Template Name: Polaroyd
-    Template URL: https://templatemag.com/polaroyd-bootstrap-agency-template/
-    Author: TemplateMag.com
-    License: https://templatemag.com/license/
-  ======================================================= -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
+    integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+    crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"
+    integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
+    crossorigin=""></script>
+
+<style>
+.eventmap{float: right;}
+</style>
+
 </head>
 
 <body>
@@ -139,7 +144,182 @@
     </nav>
   </section>
 
-  <iframe class="airtable-embed" src="https://airtable.com/embed/shrsRgEyQjexYLSlv?backgroundColor=orange" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent;"></iframe>
+  <iframe class="airtable-embed" src="https://airtable.com/embed/shrsRgEyQjexYLSlv?backgroundColor=orange" frameborder="0" onmousewheel="" width="60%" height="533" style="background: transparent;"></iframe>
+
+<div class="eventmap">
+       <button type="button" class="btn btn-warning" id='roll_up' onclick="show_GD();">Guangdong Food</button>
+       <button type="button" class="btn btn-warning" id='roll_up' onclick="show_JP();">Japanese Food</button>
+        <div id="mapid" style="width: 400px; height: 510px; border: 1px solid #AAA;"></div>
+  </div>
+
+<script>
+var mymap = L.map('mapid').setView([22.3345062, 114.1429181], 12);
+L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoieWVkZGEiLCJhIjoiY2pvZHg3OXVqMHVndzNrbGY5Y2hrYjgwMSJ9.LlDnLQBn5SMrS5IAVQDIPQ', {
+  attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+  maxZoom: 18,
+  id: 'mapbox.streets',
+  accessToken: 'pk.eyJ1IjoieWVkZGEiLCJhIjoiY2pvZHg3OXVqMHVndzNrbGY5Y2hrYjgwMSJ9.LlDnLQBn5SMrS5IAVQDIPQ'
+}).addTo(mymap);
+var orangeIcon = L.icon({
+    iconUrl: 'orange.png',
+    iconSize:[70, 65], // size of the icon
+});
+var redIcon = L.icon({
+    iconUrl: 'red.png',
+    iconSize:[20,30], // size of the icon
+});
+var blueIcon = L.icon({
+    iconUrl: 'blue.png',
+    iconSize:[70,65], // size of the icon
+});
+var pinkIcon = L.icon({
+    iconUrl: 'pink.png',
+    iconSize:[70,65], // size of the icon
+});
+var items = [];
+var airtable_read_endpoint = "https://api.airtable.com/v0/app0DGCSyNtDTJl9R/hkfood-GD?api_key=keyE2Q3CSRHLNZqT8";
+var data1 = [];
+$.getJSON(airtable_read_endpoint, function(result) {
+       $.each(result.records, function(key,value) {
+           items = {};
+               items["name"] = value.fields.Restaurant_name;
+               items["url"] = value.fields.Restaurant_url;
+               items["image_url"] = value.fields.Image;
+               items["Foodtype"] = value.fields.Foodtype;
+               items["Likes"] = value.fields.Likes;
+               items["latitud"] = value.fields.Latitude;
+               items["longitud"] = value.fields.Longtitude;
+               data1.push(items);
+               console.log(items);
+        }); // end .each
+}); // end getJSON
+
+var airtable_read_endpoint = "https://api.airtable.com/v0/app0DGCSyNtDTJl9R/hkfood-JP?api_key=keyE2Q3CSRHLNZqT8";
+var data2 = [];
+$.getJSON(airtable_read_endpoint, function(result) {
+       $.each(result.records, function(key,value) {
+           items = {};
+               items["name"] = value.fields.Restaurant_name;
+               items["url"] = value.fields.Restaurant_url;
+               items["image_url"] = value.fields.Image;
+               items["Foodtype"] = value.fields.Foodtype;
+               items["Likes"] = value.fields.Likes;
+               items["latitud"] = value.fields.Latitude;
+               items["longitud"] = value.fields.Longtitude;
+               data2.push(items);
+               console.log(items);
+        }); // end .each
+}); // end getJSON
+
+var airtable_read_endpoint = "https://api.airtable.com/v0/app0DGCSyNtDTJl9R/hkfood-KO?api_key=keyE2Q3CSRHLNZqT8";
+var data3 = [];
+$.getJSON(airtable_read_endpoint, function(result) {
+       $.each(result.records, function(key,value) {
+           items = {};
+               items["name"] = value.fields.Restaurant_name;
+               items["url"] = value.fields.Restaurant_url;
+               items["image_url"] = value.fields.Image;
+               items["Foodtype"] = value.fields.Foodtype;
+               items["Likes"] = value.fields.Likes;
+               items["latitud"] = value.fields.Latitude;
+               items["longitud"] = value.fields.Longtitude;
+               data3.push(items);
+               console.log(items);
+        }); // end .each
+}); // end getJSON
+
+var airtable_read_endpoint = "https://api.airtable.com/v0/app0DGCSyNtDTJl9R/hkfood-WE?api_key=keyE2Q3CSRHLNZqT8";
+var data4 = [];
+$.getJSON(airtable_read_endpoint, function(result) {
+       $.each(result.records, function(key,value) {
+           items = {};
+               items["name"] = value.fields.Restaurant_name;
+               items["url"] = value.fields.Restaurant_url;
+               items["image_url"] = value.fields.Image;
+               items["Foodtype"] = value.fields.Foodtype;
+               items["Likes"] = value.fields.Likes;
+               items["latitud"] = value.fields.Latitude;
+               items["longitud"] = value.fields.Longtitude;
+               data4.push(items);
+               console.log(items);
+        }); // end .each
+}); // end getJSON
+
+var polygon = L.polygon([
+    [22.3885331, 114.1935276],
+    [22.3795312, 114.1950501],
+    [22.3612613, 114.1775288]
+]).addTo(mymap);
+polygon.bindPopup("Shatin");
+
+var polygon = L.polygon([
+    [22.3157814, 114.1683964],
+    [22.303628, 114.176366],
+    [22.296512, 114.1690693]
+]).addTo(mymap);
+polygon.bindPopup("Kowloon");
+
+var polygon = L.polygon([
+    [22.2845605,114.1518813],
+    [22.280198,114.15446],
+    [22.2814166,114.1466795]
+]).addTo(mymap);
+polygon.bindPopup("Central").openPopup();
+
+</script>
+
+<script>
+function show_GD(){
+  for (var i in data1) {
+      var latlng = L.latLng({ lat: data1[i].latitud, lng: data1[i].longitud });
+      var marker = L.marker(latlng,{icon:orangeIcon})
+          .bindPopup( '<a href="' + data1[i].url + '" target="_blank">' + '<img src="' + data1[i].image_url+'" width = "150px"><br>'+data1[i].name +'<br>'+ '</a>'+data1[i].Foodtype+'<br>'+data1[i].Likes)
+          .addTo(mymap);
+  }
+}
+
+function show_JP(){
+  for (var i in data2) {
+      var latlng = L.latLng({ lat: data2[i].latitud, lng: data2[i].longitud });
+      var marker = L.marker( latlng,{icon:redIcon})
+          .bindPopup( '<a href="' + data2[i].url + '" target="_blank">' + '<img src="' + data2[i].image_url+'" width = "150px"><br>'+data2[i].name +'<br>'+ '</a>'+data2[i].Foodtype+'<br>'+data2[i].Likes)
+          .addTo(mymap);
+  }
+}
+
+function show_KO(){
+  for (var i in data3) {
+      var latlng = L.latLng({ lat: data3[i].latitud, lng: data3[i].longitud });
+      var marker = L.marker( latlng,{icon:blueIcon} )
+          .bindPopup( '<a href="' + data3[i].url + '" target="_blank">' + '<img src="' + data3[i].image_url+'" width = "150px"><br>'+data3[i].name +'<br>'+ '</a>'+data3[i].Foodtype+'<br>'+data3[i].Likes)
+          .addTo(mymap);
+  }
+}
+
+function show_WE(){
+  for (var i in data4) {
+      var latlng = L.latLng({ lat: data4[i].latitud, lng: data4[i].longitud });
+      var marker = L.marker( latlng,{icon:pinkIcon}  )
+          .bindPopup( '<a href="' + data4[i].url + '" target="_blank">' + '<img src="' + data4[i].image_url+'" width = "150px"><br>'+data4[i].name +'<br>'+ '</a>'+data4[i].Foodtype+'<br>'+data4[i].Likes)
+          .addTo(mymap);
+  }
+}
+
+</script>
+
+
+<div class="row mt2">
+  <div class="col-md-6 col-md-offset-3 centered presentation">
+    <h3>You Should Contact Us</h3>
+    <hr>
+    <a href="contact.html" class="btn btn-lg btn-theme">Get A Quote</a>
+
+  </div>
+</div>
+</div>
+
+</section>
+
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700&subset=latin,cyrillic-ext" rel="stylesheet">
