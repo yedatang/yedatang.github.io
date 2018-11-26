@@ -1,22 +1,4 @@
 jQuery(document).ready(function($) {
-  // Initiate the wowjs
-new WOW().init();
-
-// Initiate superfish on nav menu
-$('.nav-menu').superfish({
-  animation: {
-    opacity: 'show'
-  },
-  speed: 400
-});
-
-// jQuery counterUp
-$('[data-toggle="counter-up"]').counterUp({
-  delay: 10,
-  time: 1000
-});
-
-// custom code
 
   // PhotoStack Initi
   if( $('#photostack-1').length) {
