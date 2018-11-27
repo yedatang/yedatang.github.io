@@ -41,7 +41,7 @@
 <div id="map" style="width:455px; height: 497px; border: 1px solid #AAA;"></div>
 
 <script>
-var map = L.map('map').setView([22.3345062, 114.1429181], 12);;
+var map = L.map('map').setView([30.6176262, 119], 9);;
 L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoieWVkZGEiLCJhIjoiY2pvZHg3OXVqMHVndzNrbGY5Y2hrYjgwMSJ9.LlDnLQBn5SMrS5IAVQDIPQ', {
   attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
   maxZoom: 18,
@@ -53,14 +53,17 @@ var orangeIcon = L.icon({
     iconSize:[70, 65], // size of the icon
 });
 var items = [];
-var airtable_read_endpoint = "https://api.airtable.com/v0/app0DGCSyNtDTJl9R/test?api_key=keyE2Q3CSRHLNZqT8";
+var airtable_read_endpoint = "https://api.airtable.com/v0/appoetAbdYvggF71P/BookstoresFull?api_key=keyE2Q3CSRHLNZqT8";
 var data1 = [];
 $.getJSON(airtable_read_endpoint, function(result) {
        $.each(result.records, function(key,value) {
            items = {};
-               items["Name"] = value.fields.Name;
+               items["name"] = value.fields.bookstore;
+               items["image"] = value.fields.img_url;
                items["latitude"] = value.fields.latitude;
                items["longitude"] = value.fields.longitude;
+               items["likes"] = value.fields.likes;
+               items["url"] = value.fields.url;
                data1.push(items);
                console.log(items);
         }); // end .each
@@ -72,7 +75,7 @@ function show_marker(){
   for (var i in data1) {
       var latlng = L.latLng({ lat: data1[i].latitude, lng: data1[i].longitude});
       var marker = L.marker(latlng,{icon:orangeIcon})
-          .bindPopup(data1[i].Name)
+          .bindPopup( '<a href="' + data1[i].url + '" target="_blank">' + '<img src="' + data1[i].image+'" width = "150px"><br>'+data1[i].name +'<br>'+ '</a>'+data1[i].likes)
           .addTo(map);
   }
 }
