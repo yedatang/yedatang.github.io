@@ -73,18 +73,14 @@ var pinkIcon = L.icon({
     iconSize:[70,65], // size of the icon
 });
 var items = [];
-var airtable_read_endpoint = "https://api.airtable.com/v0/app0DGCSyNtDTJl9R/hkfood-GD?api_key=keyE2Q3CSRHLNZqT8";
+var airtable_read_endpoint = "https://api.airtable.com/v0/app0DGCSyNtDTJl9R/test?api_key=keyE2Q3CSRHLNZqT8";
 var data1 = [];
 $.getJSON(airtable_read_endpoint, function(result) {
        $.each(result.records, function(key,value) {
            items = {};
-               items["name"] = value.fields.Restaurant_name;
-               items["url"] = value.fields.Restaurant_url;
-               items["image_url"] = value.fields.Image;
-               items["Foodtype"] = value.fields.Foodtype;
-               items["Likes"] = value.fields.Likes;
-               items["latitud"] = value.fields.Latitude;
-               items["longitud"] = value.fields.Longtitude;
+               items["name"] = value.fields.Name;
+               items["latitud"] = value.fields.latitude;
+               items["longitud"] = value.fields.longitude;
                data1.push(items);
                console.log(items);
         }); // end .each
