@@ -126,33 +126,87 @@
       <button type="button" class="btn btn-light">書店行記</button>&nbsp&nbsp&nbsp
       <button type="button" class="btn btn-light">沙龍時光</button>&nbsp&nbsp&nbsp
       <button type="button" class="btn btn-light">文創購物</button>&nbsp&nbsp&nbsp
-
+      <button type="button" class="btn btn-light">我的分享</button>&nbsp&nbsp&nbsp
       </div>
+
       <div class="row centered">
    <p class="slide">
       <a href="javascript:showdiv1();"  id="strHref1"   class="btn-slide">
       <img src='allbutton.png'/>
       </a>
       <a href="javascript:showdiv2();"  id="strHref2"   class="btn-slide">
-      <img src='shopping.png'/>
+      &nbsp&nbsp&nbsp<img src='followbutton.png'/>
+      </a>
+      <a href="javascript:showdiv3();"  id="strHref3"   class="btn-slide">
+      &nbsp&nbsp&nbsp<img src='topicbutton.png'/>
+      </a>
+      <a href="javascript:showdiv4();"  id="strHref4"   class="btn-slide">
+      &nbsp&nbsp&nbsp<img src='travelbutton.png'/>
+      </a>
+      <a href="javascript:showdiv5();"  id="strHref5"   class="btn-slide">
+      &nbsp&nbsp&nbsp<img src='solonbutton.png'/>
+      </a>
+      <a href="javascript:showdiv6();"  id="strHref6"   class="btn-slide">
+      &nbsp&nbsp&nbsp<img src='shoppingbutton.png'/>
+      </a>
+      <a href="javascript:showdiv7();"  id="strHref7"   class="btn-slide">
+      &nbsp&nbsp&nbsp<img src='mypostbutton.png'/>
       </a>
    </p>
  </div>
 
+<div class="row centered">
  <div id="show1" style="display:none;">
    <br>
     <iframe class="airtable-embed" src="https://airtable.com/embed/shruwohd5oIFH8RFU?backgroundColor=orange&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="600" style="background: transparent; border: 1px solid #ccc;"></iframe>
  </div>
  </div>
 
+<div class="row centered">
  <div id="show2" style="display:none;">
  <br>
-<iframe class="airtable-embed" src="https://airtable.com/embed/shrerI8NnVGFNul97?backgroundColor=orange&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="600" style="background: transparent; border: 1px solid #ccc;"></iframe>
+<iframe class="airtable-embed" src="https://airtable.com/embed/shrerI8NnVGFNul97?backgroundColor=orange&viewControls=on" frameborder="0" onmousewheel="" width="80%" height="600" style="background: transparent; border: 1px solid #ccc;"></iframe>
+ </div>
+ </div>
+
+ <div class="row centered">
+ <div id="show3" style="display:none;">
+   <br>
+    <iframe class="airtable-embed" src="https://airtable.com/embed/shruwohd5oIFH8RFU?backgroundColor=orange&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="600" style="background: transparent; border: 1px solid #ccc;"></iframe>
+ </div>
+ </div>
+
+ <div class="row centered">
+ <div id="show4" style="display:none;">
+   <br>
+    <iframe class="airtable-embed" src="https://airtable.com/embed/shruwohd5oIFH8RFU?backgroundColor=orange&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="600" style="background: transparent; border: 1px solid #ccc;"></iframe>
+ </div>
+ </div>
+
+ <div class="row centered">
+ <div id="show5" style="display:none;">
+   <br>
+    <iframe class="airtable-embed" src="https://airtable.com/embed/shruwohd5oIFH8RFU?backgroundColor=orange&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="600" style="background: transparent; border: 1px solid #ccc;"></iframe>
+ </div>
+ </div>
+
+ <div class="row centered">
+ <div id="show6" style="display:none;">
+   <br>
+    <iframe class="airtable-embed" src="https://airtable.com/embed/shruwohd5oIFH8RFU?backgroundColor=orange&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="600" style="background: transparent; border: 1px solid #ccc;"></iframe>
+ </div>
+ </div>
+
+ <div class="row centered">
+ <div id="show7" style="display:none;">
+   <br>
+    <iframe class="airtable-embed" src="https://airtable.com/embed/shruwohd5oIFH8RFU?backgroundColor=orange&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="600" style="background: transparent; border: 1px solid #ccc;"></iframe>
+ </div>
  </div>
 
 
   <script>
-   function showdiv1()  {
+function showdiv1()  {
 document.getElementById('show1').style.display = "block";
 
 document.getElementById('strHref1').innerHTML="收起";
@@ -175,11 +229,89 @@ document.getElementById('strHref2').href="javascript:hidediv2();";
 }
 function hidediv2() {
 document.getElementById('show2').style.display='none';
-document.getElementById('strHref2').innerHTML="<img src='allbutton.png'/>";
+document.getElementById('strHref2').innerHTML="&nbsp&nbsp&nbsp<img src='followbutton.png'/>";
 document.getElementById('strHref2').href="javascript:showdiv2();";
 }
 
 </script>
+
+</script>
+
+<script>
+ function showdiv3()  {
+document.getElementById('show3').style.display = "block";
+
+document.getElementById('strHref3').innerHTML="收起";
+document.getElementById('strHref3').href="javascript:hidediv3();";
+}
+function hidediv3() {
+document.getElementById('show3').style.display='none';
+document.getElementById('strHref3').innerHTML="&nbsp&nbsp&nbsp<img src='topicbutton.png'/>";
+document.getElementById('strHref3').href="javascript:showdiv3();";
+}
+
+</script>
+
+<script>
+ function showdiv4()  {
+document.getElementById('show4').style.display = "block";
+
+document.getElementById('strHref4').innerHTML="收起";
+document.getElementById('strHref4').href="javascript:hidediv4();";
+}
+function hidediv4() {
+document.getElementById('show4').style.display='none';
+document.getElementById('strHref4').innerHTML="&nbsp&nbsp&nbsp<img src='travelbutton.png'/>";
+document.getElementById('strHref4').href="javascript:showdiv4();";
+}
+
+</script>
+
+<script>
+ function showdiv5()  {
+document.getElementById('show5').style.display = "block";
+
+document.getElementById('strHref5').innerHTML="收起";
+document.getElementById('strHref5').href="javascript:hidediv5();";
+}
+function hidediv5() {
+document.getElementById('show5').style.display='none';
+document.getElementById('strHref5').innerHTML="&nbsp&nbsp&nbsp<img src='solonbutton.png'/>";
+document.getElementById('strHref5').href="javascript:showdiv5();";
+}
+
+</script>
+
+<script>
+ function showdiv6()  {
+document.getElementById('show6').style.display = "block";
+
+document.getElementById('strHref6').innerHTML="收起";
+document.getElementById('strHref6').href="javascript:hidediv6();";
+}
+function hidediv6() {
+document.getElementById('show6').style.display='none';
+document.getElementById('strHref6').innerHTML="&nbsp&nbsp&nbsp<img src='shoppingbutton.png'/>";
+document.getElementById('strHref6').href="javascript:showdiv6();";
+}
+
+</script>
+
+<script>
+ function showdiv7()  {
+document.getElementById('show7').style.display = "block";
+
+document.getElementById('strHref7').innerHTML="收起";
+document.getElementById('strHref7').href="javascript:hidediv7();";
+}
+function hidediv7() {
+document.getElementById('show7').style.display='none';
+document.getElementById('strHref7').innerHTML="&nbsp&nbsp&nbsp<img src='mypostbutton.png'/>";
+document.getElementById('strHref7').href="javascript:showdiv7();";
+}
+
+</script>
+
       <!-- end:Filter -->
     </div>
   </div>
