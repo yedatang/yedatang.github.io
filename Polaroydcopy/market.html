@@ -18,23 +18,30 @@
   <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Libraries CSS Files -->
+  <link href="lib/photostack/photostack.css" rel="stylesheet">
   <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
   <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
-  <link href="lib/photostack/photostack.css" rel="stylesheet">
   <link href="lib/fullpage-menu/fullpage-menu.css" rel="stylesheet">
   <link href="lib/cubeportfolio/cubeportfolio.css" rel="stylesheet">
   <link href="lib/superslides/superslides.css" rel="stylesheet">
-  <link href="lib/ihover/ihover.css" rel="stylesheet">
+
+
 
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
 
-  <!-- =======================================================
-    Template Name: Polaroyd
-    Template URL: https://templatemag.com/polaroyd-bootstrap-agency-template/
-    Author: TemplateMag.com
-    License: https://templatemag.com/license/
-  ======================================================= -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
+    integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+    crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"
+    integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
+    crossorigin=""></script>
+
+<style>
+.eventmap{float: left;}
+</style>
+
 </head>
 
 <body>
@@ -47,7 +54,7 @@
       <li><a href="#menu2">Pages Menu</a></li>
       <li><a href="#menu3">Blog Menu</a></li>
     </ul>
-    <nav id="menu1">
+    <nav id="menu1" class="active">
       <a href="index.html">
 		    <span class="subtitle">Basic Index. Polaroid header, services, portfolio, clients logos.</span>
 		    Main Index Version
@@ -73,7 +80,7 @@
 		    Contact Us
 		  </a>
     </nav>
-    <nav id="menu2" class="active">
+    <nav id="menu2">
       <a href="team.html">
 		    <span class="subtitle">We are an awesome team. Take a look.</span>
 		    Meet The Team
@@ -112,6 +119,7 @@
   </div>
   <!-- /END CUSTOM NAVBAR -->
 
+
   <section id="slides">
     <ul class="slides-container">
       <li>
@@ -125,8 +133,9 @@
       </li>
     </ul>
     <div id="bannertext">
-      <h3>把button居中</h3>
-      <h1>来这里 体验生活</h1>
+    <br>
+    <h3>創意生活，小物美學</h3>
+    <h1>文 創 商 品</h1>
     </div>
     <!-- end:Banner text -->
     <nav class="slides-navigation">
@@ -140,233 +149,189 @@
   </section>
 
 <br>
-<br>
-<br>
-<br>
-<br>
-<div class="row centered">
-<p class="slide">
+
+
+<div class="row mt2 aligncenter">
+<div class="col-lg-3 col-md-3">
 <a href="javascript:showdiv1();"  id="strHref1"   class="btn-slide">
-<img src='allbutton.png'/>
+  <div class="spinner"></div>
+  <div class="img"><img src="img/event/1.jpg" alt="img"></div>
+  <h3 class="centered" style="color: #A79A74;">文化</h3>
 </a>
-<a href="javascript:showdiv2();"  id="strHref2"   class="btn-slide">
-&nbsp&nbsp&nbsp<img src='followbutton.png'/>
-</a>
-<a href="javascript:showdiv3();"  id="strHref3"   class="btn-slide">
-&nbsp&nbsp&nbsp<img src='topicbutton.png'/>
-</a>
-<a href="javascript:showdiv4();"  id="strHref4"   class="btn-slide">
-&nbsp&nbsp&nbsp<img src='travelbutton.png'/>
-</a>
-<a href="javascript:showdiv5();"  id="strHref5"   class="btn-slide">
-&nbsp&nbsp&nbsp<img src='solonbutton.png'/>
-</a>
-<a href="javascript:showdiv6();"  id="strHref6"   class="btn-slide">
-&nbsp&nbsp&nbsp<img src='shoppingbutton.png'/>
-</a>
-<a href="javascript:showdiv7();"  id="strHref7"   class="btn-slide">
-&nbsp&nbsp&nbsp<img src='mypostbutton.png'/>
-</a>
-</p>
 </div>
+
+<div class="col-lg-3 col-md-3">
+<a href="javascript:showdiv2();"  id="strHref2"   class="btn-slide">
+  <div class="spinner"></div>
+  <div class="img"><img src="img/event/2.jpg" alt="img"></div>
+  <h3 class="centered" style="color: #A79A74;">音樂</h3>
+</a>
+</div>
+
+
+<div class="col-lg-3 col-md-3">
+<a href="javascript:showdiv3();"  id="strHref3"   class="btn-slide">
+  <div class="spinner"></div>
+  <div class="img"><img src="img/event/3.jpg" alt="img"></div>
+  <h3 class="centered" style="color: #A79A74;">影視</h3>
+</a>
+</div>
+
+<div class="col-lg-3 col-md-3">
+<a href="javascript:showdiv4();"  id="strHref4"   class="btn-slide">
+  <div class="spinner"></div>
+  <div class="img"><img src="img/event/4.jpg" alt="img"></div>
+  <h3 class="centered" style="color: #A79A74;">藝術</h3>
+</a>
+</div>
+         <!-- end normal -->
+</div>
+</div>
+
+<br>
 
 <div class="row centered">
  <div id="show1" style="display:none;">
    <br>
-    <iframe class="airtable-embed" src="https://airtable.com/embed/shruwohd5oIFH8RFU?backgroundColor=orange&viewControls=on" frameborder="0" onmousewheel="" width="80%" height="600" style="background: transparent; border: 1px solid #ccc;"></iframe>
- </div>
- </div>
-
-<div class="row centered">
- <div id="show2" style="display:none;">
- <br>
-<iframe class="airtable-embed" src="https://airtable.com/embed/shrerI8NnVGFNul97?backgroundColor=orange&viewControls=on" frameborder="0" onmousewheel="" width="80%" height="600" style="background: transparent; border: 1px solid #ccc;"></iframe>
+   <iframe class="airtable-embed" src="https://airtable.com/embed/shruwohd5oIFH8RFU?backgroundColor=orange" frameborder="0" onmousewheel="" width="100%" height="700" style="background: transparent; border: 1px solid #ccc;"></iframe>
  </div>
  </div>
 
  <div class="row centered">
- <div id="show3" style="display:none;">
-   <br>
-    <iframe class="airtable-embed" src="https://airtable.com/embed/shruwohd5oIFH8RFU?backgroundColor=orange&viewControls=on" frameborder="0" onmousewheel="" width="80%" height="600" style="background: transparent; border: 1px solid #ccc;"></iframe>
- </div>
- </div>
+  <div id="show2" style="display:none;">
+    <br>
+    <iframe class="airtable-embed" src="https://airtable.com/embed/shruwohd5oIFH8RFU?backgroundColor=orange" frameborder="0" onmousewheel="" width="100%" height="700" style="background: transparent; border: 1px solid #ccc;"></iframe>
+  </div>
+  </div>
 
- <div class="row centered">
- <div id="show4" style="display:none;">
-   <br>
-    <iframe class="airtable-embed" src="https://airtable.com/embed/shruwohd5oIFH8RFU?backgroundColor=orange&viewControls=on" frameborder="0" onmousewheel="" width="80%" height="600" style="background: transparent; border: 1px solid #ccc;"></iframe>
- </div>
- </div>
+  <div class="row centered">
+   <div id="show3" style="display:none;">
+     <br>
+     <iframe class="airtable-embed" src="https://airtable.com/embed/shruwohd5oIFH8RFU?backgroundColor=orange" frameborder="0" onmousewheel="" width="100%" height="700" style="background: transparent; border: 1px solid #ccc;"></iframe>
+   </div>
+   </div>
 
- <div class="row centered">
- <div id="show5" style="display:none;">
-   <br>
-    <iframe class="airtable-embed" src="https://airtable.com/embed/shruwohd5oIFH8RFU?backgroundColor=orange&viewControls=on" frameborder="0" onmousewheel="" width="80%" height="600" style="background: transparent; border: 1px solid #ccc;"></iframe>
- </div>
- </div>
-
- <div class="row centered">
- <div id="show6" style="display:none;">
-   <br>
-    <iframe class="airtable-embed" src="https://airtable.com/embed/shruwohd5oIFH8RFU?backgroundColor=orange&viewControls=on" frameborder="0" onmousewheel="" width="80%" height="600" style="background: transparent; border: 1px solid #ccc;"></iframe>
- </div>
- </div>
-
- <div class="row centered">
- <div id="show7" style="display:none;">
-   <br>
-    <iframe class="airtable-embed" src="https://airtable.com/embed/shruwohd5oIFH8RFU?backgroundColor=orange&viewControls=on" frameborder="0" onmousewheel="" width="80%" height="600" style="background: transparent; border: 1px solid #ccc;"></iframe>
- </div>
- </div>
+   <div class="row centered">
+    <div id="show4" style="display:none;">
+      <br>
+      <iframe class="airtable-embed" src="https://airtable.com/embed/shruwohd5oIFH8RFU?backgroundColor=orange" frameborder="0" onmousewheel="" width="100%" height="700" style="background: transparent; border: 1px solid #ccc;"></iframe>
+    </div>
+    </div>
 
 
-  <script>
+</div>
+<br>
+
+
+<script>
 function showdiv1()  {
 document.getElementById('show1').style.display = "block";
 
-document.getElementById('strHref1').innerHTML="收起";
+document.getElementById('strHref1').innerHTML="<img src='img/event/1.jpg'  style='opacity: 0.4;'/>  <h3 class='centered'>收起</h3>";
 document.getElementById('strHref1').href="javascript:hidediv1();";
 }
 function hidediv1() {
 document.getElementById('show1').style.display='none';
-document.getElementById('strHref1').innerHTML="<img src='allbutton.png'/>";
+document.getElementById('strHref1').innerHTML="<img src='img/event/1.jpg'>  <h3 class='centered' style='color: #A79A74;'>文化</h3>";
 document.getElementById('strHref1').href="javascript:showdiv1();";
 }
 
 </script>
 
 <script>
- function showdiv2()  {
+function showdiv2()  {
 document.getElementById('show2').style.display = "block";
 
-document.getElementById('strHref2').innerHTML="收起";
+document.getElementById('strHref2').innerHTML="<img src='img/event/2.jpg'  style='opacity: 0.4;'/>  <h3 class='centered'>收起</h3>";
 document.getElementById('strHref2').href="javascript:hidediv2();";
 }
 function hidediv2() {
 document.getElementById('show2').style.display='none';
-document.getElementById('strHref2').innerHTML="&nbsp&nbsp&nbsp<img src='followbutton.png'/>";
+document.getElementById('strHref2').innerHTML="<img src='img/event/2.jpg'>  <h3 class='centered' style='color: #A79A74;'>音樂</h3>";
 document.getElementById('strHref2').href="javascript:showdiv2();";
 }
 
 </script>
 
-
 <script>
- function showdiv3()  {
+function showdiv3()  {
 document.getElementById('show3').style.display = "block";
 
-document.getElementById('strHref3').innerHTML="收起";
+document.getElementById('strHref3').innerHTML="<img src='img/event/3.jpg'  style='opacity: 0.4;'/>  <h3 class='centered'>收起</h3>";
 document.getElementById('strHref3').href="javascript:hidediv3();";
 }
 function hidediv3() {
 document.getElementById('show3').style.display='none';
-document.getElementById('strHref3').innerHTML="&nbsp&nbsp&nbsp<img src='topicbutton.png'/>";
+document.getElementById('strHref3').innerHTML="<img src='img/event/3.jpg'>  <h3 class='centered' style='color: #A79A74;'>影視</h3>";
 document.getElementById('strHref3').href="javascript:showdiv3();";
 }
 
 </script>
 
 <script>
- function showdiv4()  {
+function showdiv4()  {
 document.getElementById('show4').style.display = "block";
 
-document.getElementById('strHref4').innerHTML="收起";
+document.getElementById('strHref4').innerHTML="<img src='img/event/4.jpg'  style='opacity: 0.4;'/>  <h3 class='centered'>收起</h3>";
 document.getElementById('strHref4').href="javascript:hidediv4();";
 }
 function hidediv4() {
 document.getElementById('show4').style.display='none';
-document.getElementById('strHref4').innerHTML="&nbsp&nbsp&nbsp<img src='travelbutton.png'/>";
+document.getElementById('strHref4').innerHTML="<img src='img/event/4.jpg'>  <h3 class='centered' style='color: #A79A74;'>藝術</h3>";
 document.getElementById('strHref4').href="javascript:showdiv4();";
 }
 
 </script>
 
-<script>
- function showdiv5()  {
-document.getElementById('show5').style.display = "block";
-
-document.getElementById('strHref5').innerHTML="收起";
-document.getElementById('strHref5').href="javascript:hidediv5();";
-}
-function hidediv5() {
-document.getElementById('show5').style.display='none';
-document.getElementById('strHref5').innerHTML="&nbsp&nbsp&nbsp<img src='solonbutton.png'/>";
-document.getElementById('strHref5').href="javascript:showdiv5();";
-}
-
-</script>
-
-<script>
- function showdiv6()  {
-document.getElementById('show6').style.display = "block";
-
-document.getElementById('strHref6').innerHTML="收起";
-document.getElementById('strHref6').href="javascript:hidediv6();";
-}
-function hidediv6() {
-document.getElementById('show6').style.display='none';
-document.getElementById('strHref6').innerHTML="&nbsp&nbsp&nbsp<img src='shoppingbutton.png'/>";
-document.getElementById('strHref6').href="javascript:showdiv6();";
-}
-
-</script>
-
-<script>
- function showdiv7()  {
-document.getElementById('show7').style.display = "block";
-
-document.getElementById('strHref7').innerHTML="收起";
-document.getElementById('strHref7').href="javascript:hidediv7();";
-}
-function hidediv7() {
-document.getElementById('show7').style.display='none';
-document.getElementById('strHref7').innerHTML="&nbsp&nbsp&nbsp<img src='mypostbutton.png'/>";
-document.getElementById('strHref7').href="javascript:showdiv7();";
-}
-</script>
+<br>
+<br>
+<br>
 
 
-<section id="contact" class="section-bg-color mt2">
-  <div class="container centered ptb">
-    <div class="col-md-2 col-md-offset-1">
-      <i class="icon ion-ios7-location-outline large-icon"></i>
-      <h5>HEAD OFFICE</h5>
-      <p>902 Main Street, MVD, UY.</p>
+    <div class="row presentation">
+      <div class="col-lg-1 col-md-1 centered">
+        <h2>119</h2>
+      </div>
+      <div class="col-lg-3 col-md-3">
+        <h4>PHOTOGRAPHY</h4>
+        <p>Dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since, when an unknown ristique senectus et netus.</p>
+      </div>
+
+      <div class="col-lg-1 col-md-1 centered">
+        <h2>28</h2>
+      </div>
+      <div class="col-lg-3 col-md-3">
+        <h4>WEB DESIGN</h4>
+        <p>Dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since, when an unknown ristique senectus et netus.</p>
+      </div>
+
+      <div class="col-lg-1 col-md-1 centered">
+        <h2>227</h2>
+      </div>
+      <div class="col-lg-3 col-md-3">
+        <h4>LOGOS</h4>
+        <p>Dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since, when an unknown ristique senectus et netus.</p>
+      </div>
     </div>
-    <div class="col-md-2 col-md-offset-2">
-      <i class="icon ion-ios7-telephone-outline large-icon"></i>
-      <h5>CALL US</h5>
-      <p>(598) 123-4567</p>
-    </div>
-    <div class="col-md-2 col-md-offset-2">
-      <i class="icon ion-ios7-paperplane-outline large-icon"></i>
-      <h5>QUERIES</h5>
-      <p>support@mail.com</p>
-    </div>
-  </div>
-</section>
+    <!-- /row -->
 
+
+
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700&subset=latin,cyrillic-ext" rel="stylesheet">
 
   <section id="end" class="section-footer">
     <div class="container centered ptb">
       <div class="col-md-6 col-md-offset-3">
-        <h3>Polaroyd Template</h3>
-        <p>Mellentesque habitant morbi tristique senectus<br/> et netus et malesuada famesac turpis egestas.</p>
+        <h3><strong>BOOKSTORE+</strong></h3>
+        <p>閱讀，并體驗更多<br>版权為Bookstore+所有</p>
         <p class="mt">
+          <p>聯繫我們</p>
           <a href="#"><i class="fa fa-dribbble"></i></a>
           <a href="#"><i class="fa fa-instagram"></i></a>
           <a href="#"><i class="fa fa-twitter"></i></a>
         </p>
-        <p>Copyright &copy; - <strong>Polaroyd</strong> All rights reserved.</p>
-        <div class="credits">
-          <!--
-            You are NOT allowed to delete the credit link to TemplateMag with free version.
-            You can delete the credit link only if you bought the pro version.
-            Buy the pro version with working PHP/AJAX contact form: https://templatemag.com/polaroyd-bootstrap-agency-template/
-            Licensing information: https://templatemag.com/license/
-          -->
-          Created with Polaroyd template by <a href="https://templatemag.com/">TemplateMag</a>
-        </div>
       </div>
     </div>
   </section>
@@ -380,8 +345,10 @@ document.getElementById('strHref7').href="javascript:showdiv7();";
   <script src="lib/cubeportfolio/cubeportfolio.js"></script>
   <script src="lib/classie/classie.js"></script>
   <script src="lib/fullpage-menu/fullpage-menu.js"></script>
-  <script src="lib/photostack/photostack.js"></script>
   <script src="lib/superslides/superslides.js"></script>
+  <script src="lib/photostack/photostack.js"></script>
+
+
 
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
