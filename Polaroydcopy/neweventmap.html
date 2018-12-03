@@ -16,17 +16,22 @@
     crossorigin=""></script>
 
   <style>
-body{background-color:#FFFFFF;}
+body{background-color:grey;}
   </style>
 
 </head>
-</script>
-<button type="button" class="btn btn-warning" onclick="show_marker();">找书店</button>
+
+<div class="container">
+<div class="centered">
 <br>
-<div id="map" style="width:455px; height: 1200px; border: 1px solid #AAA;"></div>
+<button type="button" class="btn btn-light btn-lg" onclick="show_marker();"> 顯示書店位置 </button>
+<br>
+<div id="map" style="width:90%; height: 500px; border: 1px solid #AAA;"></div>
+</div>
+</div>
 
 <script>
-var map = L.map('map').setView([30.6176262, 119], 9);;
+var map = L.map('map').setView([31.5,110.7111136], 5);;
 L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoieWVkZGEiLCJhIjoiY2pvZHg3OXVqMHVndzNrbGY5Y2hrYjgwMSJ9.LlDnLQBn5SMrS5IAVQDIPQ', {
   attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
   maxZoom: 18,
@@ -34,8 +39,8 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=p
   accessToken: 'pk.eyJ1IjoieWVkZGEiLCJhIjoiY2pvZHg3OXVqMHVndzNrbGY5Y2hrYjgwMSJ9.LlDnLQBn5SMrS5IAVQDIPQ'
 }).addTo(map);
 var orangeIcon = L.icon({
-    iconUrl: 'orange.png',
-    iconSize:[70, 65], // size of the icon
+    iconUrl: 'bookicon.png',
+    iconSize:[35, 35], // size of the icon
 });
 var items = [];
 var airtable_read_endpoint = "https://api.airtable.com/v0/appoetAbdYvggF71P/BookstoresFull?api_key=keyE2Q3CSRHLNZqT8";
@@ -60,7 +65,7 @@ function show_marker(){
   for (var i in data1) {
       var latlng = L.latLng({ lat: data1[i].latitude, lng: data1[i].longitude});
       var marker = L.marker(latlng,{icon:orangeIcon})
-          .bindPopup( '<a href="' + data1[i].url + '" target="_blank">' + '<img src="' + data1[i].image+'" width = "150px"><br>'+data1[i].name +'<br>'+ '</a>'+data1[i].likes)
+          .bindPopup( '<a href="' + data1[i].url + '" target="_blank">' + '<img src="' + data1[i].image+'" width = "150px"><br>'+data1[i].name +'<br>'+ '</a>'+'♡'+data1[i].likes)
           .addTo(map);
   }
 }
