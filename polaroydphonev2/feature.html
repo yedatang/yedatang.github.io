@@ -82,38 +82,41 @@
         <i class="icon ion-ios7-bookmarks-outline large-icon"></i>
         <h1>書 店 分 類</h1>
         <p>請 選 擇 您 感 興 趣 的 類 別</p>
+        </a>
       </div>
     </div>
-    <!-- /row -->
   </div>
+
 
   <div class="container">
     <div class="row">
 
       <div class="col-lg-3 col-md-3 blog-list">
       <a href="javascript:showdiv1();"  id="strHref1"   class="btn-slide">
-      <img class="img-circle aligncenter" src="img/feature/14.jpg"></a>
+      <img class="img-circle aligncenter" src="img/feature/14.jpg">
       <p class="centered" style="font-size:22px;color:black;">書   店   風   格</p>
-        <p class="centered">文藝、學術、兒童等多種類型的書店</p>
+      <p class="centered">文藝、學術、兒童等多種類型的書店</p>
+      </a>
       </div>
 
-      <div class="col-lg-3 col-md-3 blog-list">
-      <a href="javascript:showdiv1();"  id="strHref1"   class="btn-slide">
-       <div id="show1" style="display:none;">
-         <br>
-         <img class="img-circle aligncenter" src="img/feature/14.jpg"></a>
-         <p class="centered" style="font-size:22px;color:black;">書   店   風   格</p>
-           <p class="centered">文藝、學術、兒童等多種類型的書店</p>
-        </div>
-        </div>
       <br><br><br><br>
 
+      <div class="centered blog-list">
+      <div id="show1" style="display:none;">
+      <img src="img/feature/14.jpg">
+      <p class="centered" style="font-size:22px;color:black;">文   藝   休   閒</p>
+      <p class="centered">文藝、學術、兒童等多種類型的書店</p>
+      <br><br><br><br>
+      </div>
+      </div>
+
+
       <div class="col-lg-3 col-md-3 blog-list">
-      <a href="javascript:showdiv2();"  id="strHref2"   class="btn-slide">
        <img class="img-circle aligncenter" src="img//feature/13.jpg"></a>
         <p class="centered" style="font-size:20px;color:black;">書   籍   內   容</p>
         <p class="centered">人文、設計、雜誌各種特色主營書籍</p>
       </div>
+
         <br><br><br><br>
 
 
@@ -122,6 +125,25 @@
 
 
 <br>
+
+
+
+<script>
+function showdiv1()  {
+document.getElementById('show1').style.display = "block";
+
+document.getElementById('strHref1').innerHTML="<div class='col-lg-3 col-md-3 blog-list'><img class='img-circle aligncenter' src='img/feature/14.jpg' style='opacity: 0.4;'/><p class='centered' style='font-size:22px;color:black;'>收     起</p></div>";
+document.getElementById('strHref1').href="javascript:hidediv1();";
+}
+function hidediv1() {
+document.getElementById('show1').style.display='none';
+document.getElementById('strHref1').innerHTML="<div class='col-lg-3 col-md-3 blog-list'><img class='img-circle aligncenter' src='img/feature/14.jpg'><p class='centered' style='font-size:22px;color:black;'>書   店   風   格</p><p class='centered'>文藝、學術、兒童等多種類型的書店</p></div>";
+document.getElementById('strHref1').href="javascript:showdiv1();";
+}
+
+</script>
+
+
 
   <section id="end" class="section-footer">
     <div class="container centered ptb">
