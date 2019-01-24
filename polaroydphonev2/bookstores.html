@@ -29,6 +29,7 @@
   <!-- Libraries CSS Files -->
   <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
   <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="lib/photostack/photostack.css" rel="stylesheet">
   <link href="lib/fullpage-menu/fullpage-menu.css" rel="stylesheet">
   <link href="lib/cubeportfolio/cubeportfolio.css" rel="stylesheet">
   <link href="lib/superslides/superslides.css" rel="stylesheet">
@@ -36,14 +37,12 @@
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
-    integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
-    crossorigin=""/>
-  <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"
-    integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
-    crossorigin=""></script>
-
+  <!-- =======================================================
+    Template Name: Polaroyd
+    Template URL: https://templatemag.com/polaroyd-bootstrap-agency-template/
+    Author: TemplateMag.com
+    License: https://templatemag.com/license/
+  ======================================================= -->
 </head>
 
 <body>
@@ -76,274 +75,172 @@
     </nav>
   </div>
   <!-- /END CUSTOM NAVBAR -->
-    <div class="container">
-  <div class="row mt3 presentation centered">
-    <i class="icon ion-ios7-bookmarks-outline large-icon"></i>
-    <h1 class="centered" style="font-family:PMingLiU;font-size:42px; ">書店</h1>
-   <p style="font-family:PMingLiU;">這些是我們收集的好書店</p>
-    <hr>
-    <div class="col-md-5">
-      <img src="words.png">
+
+  <div class="container">
+    <div class="row mt3 presentation">
+      <div class="centered">
+        <i class="icon ion-ios7-bookmarks-outline large-icon"></i>
+        <h1>書 店 分 類</h1>
+        <p>請 選 擇 您 感 興 趣 的 類 別</p>
+        </a>
+      </div>
     </div>
-    <div class="col-md-4">
-
-<p style="font-size:18px; font-family:PMingLiU;line-height:45px;color:black;">請選擇你想要的書店：</p>
-<a href="javascript:showdiv1();"  id="strHref1"   class="btn-slide" style="font-size:18px; font-family:PMingLiU;line-height:45px;color:grey;">
-『 全 部 』</a><br>
-
-<div class="row centered">
- <div id="show1" style="display:none;">
-   <br>
-    <iframe class="airtable-embed" src="https://airtable.com/embed/shruwohd5oIFH8RFU?backgroundColor=orange" frameborder="0" onmousewheel="" width="100%" height="555" style="background: transparent; border: 1px solid #ccc;"></iframe>
- </div>
- </div>
-
-<a href="javascript:showdiv2();"  id="strHref2"   class="btn-slide" style="font-size:18px; font-family:PMingLiU;line-height:45px;color:grey;">
-『 人 文 』
-</a><br>
-
-<div class="row centered">
- <div id="show2" style="display:none;">
- <br>
-<iframe class="airtable-embed" src="https://airtable.com/embed/shr6DfDyP5c0RFRAV?backgroundColor=orange" frameborder="0" onmousewheel="" width="100%" height="555" style="background: transparent; border: 1px solid #ccc;"></iframe>
- </div>
- </div>
-
-<a href="javascript:showdiv3();"  id="strHref3"   class="btn-slide" style="font-size:18px; font-family:PMingLiU;line-height:45px;color:grey;">
-『 藝 術 』
-</a><br>
-
-<div class="row centered">
-<div id="show3" style="display:none;">
-  <br>
-<iframe class="airtable-embed" src="https://airtable.com/embed/shrKj2aXdIBSN11TC?backgroundColor=orange" frameborder="0" onmousewheel="" width="100%" height="555" style="background: transparent; border: 1px solid #ccc;"></iframe>
-</div>
-</div>
+  </div>
 
 
+  <div class="container">
+    <div class="row">
 
-<a href="javascript:showdiv4();"  id="strHref4"   class="btn-slide" style="font-size:18px; font-family:PMingLiU;line-height:45px;color:grey;">
-『 舊 書 』
-</a><br>
+      <div class="col-lg-3 col-md-3 blog-list">
+      <a href="javascript:showdiv1();"  id="strHref1"   class="btn-slide">
+      <img class="img-circle aligncenter" src="img/feature/5.jpg">
+      <p class="centered" style="font-size:22px;color:black;">書   店   風   格</p>
+      <p class="centered">文藝、學術、兒童等多種類型的書店</p>
+      </a>
+      </div>
 
-<div class="row centered">
-<div id="show4" style="display:none;">
-  <br>
-<iframe class="airtable-embed" src="https://airtable.com/embed/shrthRH92tRHlb4Wf?backgroundColor=orange" frameborder="0" onmousewheel="" width="100%" height="555" style="background: transparent; border: 1px solid #ccc;"></iframe>
-</div>
-</div>
+      <br><br><br>
 
-
-<a href="javascript:showdiv5();"  id="strHref5"   class="btn-slide" style="font-size:18px; font-family:PMingLiU;line-height:45px;color:grey;">
-『 有 畫 室 』
-</a><br>
-
-<div class="row centered">
-<div id="show5" style="display:none;">
-  <br>
-<iframe class="airtable-embed" src="https://airtable.com/embed/shrIwTvRBlu2LvJ2d?backgroundColor=orange" frameborder="0" onmousewheel="" width="100%" height="555" style="background: transparent; border: 1px solid #ccc;"></iframe>
-</div>
-</div>
-
-<a href="javascript:showdiv6();"  id="strHref6"   class="btn-slide" style="font-size:18px; font-family:PMingLiU;line-height:45px;color:grey;">
-『 可 觀 影 』
-</a><br>
-
-<div class="row centered">
-<div id="show6" style="display:none;">
-  <br>
-<iframe class="airtable-embed" src="https://airtable.com/embed/shrHR8T8zJAtoKAzL?backgroundColor=orange" frameborder="0" onmousewheel="" width="100%" height="555" style="background: transparent; border: 1px solid #ccc;"></iframe>
-</div>
-</div>
-
-<a href="javascript:showdiv7();"  id="strHref7"   class="btn-slide" style="font-size:18px; font-family:PMingLiU;line-height:45px;color:grey;">
-『 有 簡 食 』
-</a><br>
-
-<div class="row centered">
-<div id="show7" style="display:none;">
-  <br>
-<iframe class="airtable-embed" src="https://airtable.com/embed/shrB9oobQuwSVqVIx?backgroundColor=orange" frameborder="0" onmousewheel="" width="100%" height="555" style="background: transparent; border: 1px solid #ccc;"></iframe>
-</div>
-</div>
-
-<a href="javascript:showdiv8();"  id="strHref8"   class="btn-slide" style="font-size:18px; font-family:PMingLiU;line-height:45px;color:grey;">
-『 可 住 宿 』
-</a><br>
-
-<div class="row centered">
-<div id="show8" style="display:none;">
-  <br>
-<iframe class="airtable-embed" src="https://airtable.com/embed/shrQTI9EGw2du1uxc?backgroundColor=orange" frameborder="0" onmousewheel="" width="100%" height="555" style="background: transparent; border: 1px solid #ccc;"></iframe>
-</div>
-</div>
-
-<a href="javascript:showdiv9();"  id="strHref9"   class="btn-slide" style="font-size:18px; font-family:PMingLiU;line-height:45px;color:grey;">
-『 地 圖 』
-</a><br>
-</p>
-</div>
-
- <div class="row centered">
- <div id="show9" style="display:none;">
-   <br>
-<iframe class="map-embed" src="neweventmap.html" frameborder="0" onmousewheel="" width="100%" height="600" style="background: transparent; border: 1px solid #ccc;"></iframe>
- </div>
- </div>
+      <div class="centered blog-list">
+      <div id="show1" style="display:none;">
+      <a href="literature.html"><img src="img/feature/2.jpg">
+      <p class="centered" style="font-size:22px;color:black;">文   藝   休   閒</p>
+      <p class="centered">文藝、學術、兒童等多種類型的書店</p>
+      </a>
+      <br><br><br>
 
 
- <script>
- function showdiv1()  {
- document.getElementById('show1').style.display = "block";
+      <a href="literature.html"><img src="img/feature/3.jpg">
+      <p class="centered" style="font-size:22px;color:black;">儿  童   親   子</p>
+      <p class="centered">文藝、學術、兒童等多種類型的書店</p>
+      </a>
+      <br><br><br>
 
- document.getElementById('strHref1').innerHTML="收起";
- document.getElementById('strHref1').href="javascript:hidediv1();";
- }
- function hidediv1() {
- document.getElementById('show1').style.display='none';
- document.getElementById('strHref1').innerHTML="『 全 部 』";
- document.getElementById('strHref1').href="javascript:showdiv1();";
- }
 
- </script>
+      <a href="literature.html"><img src="img/feature/1.jpg">
+      <p class="centered" style="font-size:22px;color:black;">知   識   學   術</p>
+      <p class="centered">文藝、學術、兒童等多種類型的書店</p>
+      </a>
+      <br><br><br>
+
+
+      <a href="literature.html"><img src="img/feature/4.jpg">
+      <p class="centered" style="font-size:22px;color:black;">舊   書   淘   金</p>
+      <p class="centered">文藝、學術、兒童等多種類型的書店</p>
+      </a>
+      <br><br><br>
+
+      </div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-3 blog-list">
+          <a href="javascript:showdiv2();"  id="strHref2"   class="btn-slide">
+          <img class="img-circle aligncenter" src="img/feature/6.jpg">
+          <p class="centered" style="font-size:22px;color:black;">書   籍   內   容</p>
+          <p class="centered">人文、設計、雜誌各種特色主營書籍</p>
+          </a>
+          </div>
+
+          <br><br><br>
+
+          <div class="centered blog-list">
+          <div id="show2" style="display:none;">
+          <a href="literature.html"><img src="img/feature/7.jpg">
+          <p class="centered" style="font-size:22px;color:black;">綜   合</p>
+          </a>
+          <br><br><br>
+
+          <a href="literature.html"><img src="img/feature/12.jpg">
+          <p class="centered" style="font-size:22px;color:black;">專   業</p>
+          <p class="centered">文藝、學術、兒童等多種類型的書店</p>
+          </a>
+          <br><br><br>
+
+          <a href="literature.html"><img src="img/feature/10.jpg">
+          <p class="centered" style="font-size:22px;color:black;">藝   術</p>
+          <p class="centered">文藝、學術、兒童等多種類型的書店</p>
+          </a>
+          <br><br><br>
+
+
+          <a href="literature.html"><img src="img/feature/14.jpg">
+          <p class="centered" style="font-size:22px;color:black;">外   文</p>
+          <p class="centered">文藝、學術、兒童等多種類型的書店</p>
+          </a>
+          <br><br><br>
+
+
+          <a href="literature.html"><img src="img/feature/13.jpg">
+          <p class="centered" style="font-size:22px;color:black;">兒   童</p>
+          <p class="centered">文藝、學術、兒童等多種類型的書店</p>
+          </a>
+          <br><br><br>
+
+          <a href="literature.html"><img src="img/feature/11.jpg">
+          <p class="centered" style="font-size:22px;color:black;">教   育</p>
+          <p class="centered">文藝、學術、兒童等多種類型的書店</p>
+          </a>
+          <br><br><br>
+
+          </div>
+          </div>
+
+        <div class="col-lg-3 col-md-3 blog-list">
+         <img class="img-circle aligncenter" src="img//feature/12.jpg"></a>
+          <p class="centered" style="font-size:20px;color:black;">特   色   體   驗</p>
+          <p class="centered">人文、設計、雜誌各種特色主營書籍</p>
+        </div>
+
+          <br><br><br>
+
+
+    </div>
+  </div>
+
+
+<br>
+
+
 
 <script>
- function showdiv2()  {
+function showdiv1()  {
+document.getElementById('show1').style.display = "block";
+
+document.getElementById('strHref1').innerHTML="<div class='col-lg-3 col-md-3 blog-list'><img class='img-circle aligncenter' src='img/feature/5.jpg' style='opacity: 0.4;'/><p class='centered' style='font-size:22px;color:black;'>收     起</p></div>";
+document.getElementById('strHref1').href="javascript:hidediv1();";
+}
+function hidediv1() {
+document.getElementById('show1').style.display='none';
+document.getElementById('strHref1').innerHTML="<div class='col-lg-3 col-md-3 blog-list'><img class='img-circle aligncenter' src='img/feature/5.jpg'><p class='centered' style='font-size:22px;color:black;'>書   店   風   格</p><p class='centered'>文藝、學術、兒童等多種類型的書店</p></div>";
+document.getElementById('strHref1').href="javascript:showdiv1();";
+}
+
+function showdiv2()  {
 document.getElementById('show2').style.display = "block";
 
-document.getElementById('strHref2').innerHTML="收起";
-document.getElementById('strHref2').href="javascript:hidediv2();"
+document.getElementById('strHref2').innerHTML="<div class='col-lg-3 col-md-3 blog-list'><img class='img-circle aligncenter' src='img/feature/5.jpg' style='opacity: 0.4;'/><p class='centered' style='font-size:22px;color:black;'>收     起</p></div>";
+document.getElementById('strHref2').href="javascript:hidediv2();";
 }
 function hidediv2() {
 document.getElementById('show2').style.display='none';
-document.getElementById('strHref2').innerHTML="『 人 文 』"
-document.getElementById('strHref2').href="javascript:showdiv2();"
+document.getElementById('strHref2').innerHTML="<div class='col-lg-3 col-md-3 blog-list'><img class='img-circle aligncenter' src='img/feature/6.jpg'><p class='centered' style='font-size:22px;color:black;'>書   籍   內   容</p><p class='centered'>人文、設計、雜誌各種特色主營書籍</p></div>";
+document.getElementById('strHref2').href="javascript:showdiv2();";
 }
 
 </script>
 
 
-<script>
- function showdiv3()  {
-document.getElementById('show3').style.display = "block";
-
-document.getElementById('strHref3').innerHTML="收起";
-document.getElementById('strHref3').href="javascript:hidediv3();";
-}
-function hidediv3() {
-document.getElementById('show3').style.display='none';
-document.getElementById('strHref3').innerHTML="『 藝 術 』"
-document.getElementById('strHref3').href="javascript:showdiv3();"
-}
-
-</script>
-
-<script>
- function showdiv4()  {
-document.getElementById('show4').style.display = "block";
-
-document.getElementById('strHref4').innerHTML="收起";
-document.getElementById('strHref4').href="javascript:hidediv4();";
-}
-function hidediv4() {
-document.getElementById('show4').style.display='none';
-document.getElementById('strHref4').innerHTML="『 舊 書 』"
-document.getElementById('strHref4').href="javascript:showdiv4();"
-}
-
-</script>
-
-<script>
- function showdiv5()  {
-document.getElementById('show5').style.display = "block";
-
-document.getElementById('strHref5').innerHTML="收起";
-document.getElementById('strHref5').href="javascript:hidediv5();";
-}
-function hidediv5() {
-document.getElementById('show5').style.display='none';
-document.getElementById('strHref5').innerHTML="『 有 畫 室 』"
-document.getElementById('strHref5').href="javascript:showdiv5();"
-}
-
-</script>
-
-<script>
- function showdiv6()  {
-document.getElementById('show6').style.display = "block";
-
-document.getElementById('strHref6').innerHTML="收起";
-document.getElementById('strHref6').href="javascript:hidediv6();";
-}
-function hidediv6() {
-document.getElementById('show6').style.display='none';
-document.getElementById('strHref6').innerHTML="『 可 觀 影 』"
-document.getElementById('strHref6').href="javascript:showdiv6();"
-}
-
-</script>
-
-<script>
- function showdiv7()  {
-document.getElementById('show7').style.display = "block";
-
-document.getElementById('strHref7').innerHTML="收起";
-document.getElementById('strHref7').href="javascript:hidediv7();";
-}
-function hidediv7() {
-document.getElementById('show7').style.display='none';
-document.getElementById('strHref7').innerHTML="『 有 簡 食 』"
-document.getElementById('strHref7').href="javascript:showdiv7();"
-}
-</script>
-
-<script>
- function showdiv8()  {
-document.getElementById('show8').style.display = "block";
-
-document.getElementById('strHref8').innerHTML="收起";
-document.getElementById('strHref8').href="javascript:hidediv8();";
-}
-function hidediv8() {
-document.getElementById('show8').style.display='none';
-document.getElementById('strHref8').innerHTML="『 可 住 宿 』"
-document.getElementById('strHref8').href="javascript:showdiv8();"
-}
-</script>
-
-<script>
- function showdiv9()  {
-document.getElementById('show9').style.display = "block";
-
-document.getElementById('strHref9').innerHTML="收起";
-document.getElementById('strHref9').href="javascript:hidediv9();";
-}
-function hidediv9() {
-document.getElementById('show9').style.display='none';
-document.getElementById('strHref9').innerHTML="『 地 圖 』"
-document.getElementById('strHref9').href="javascript:showdiv9();"
-}
-</script>
-
-
-  <div class="row centered">
-<p style="font-size:18px; font-family:PMingLiU;line-height:45px;color:black;">關於書店 , 我想</p>
-<a href="share.html" class="btn btn-lg btn-theme" >分享</a>
-  </div>
-</div>
-</section>
-
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700&subset=latin,cyrillic-ext" rel="stylesheet">
 
   <section id="end" class="section-footer">
     <div class="container centered ptb">
       <div class="col-md-6 col-md-offset-3">
         <h3><strong>BOOKSTORE+</strong></h3>
-        <p>阅读，并体验更多<br>版权為Bookstore+所有</p>
+        <p>閱讀，并體驗更多<br>版权為Bookstore+所有</p>
         <p class="mt">
-          <p>联系我们</p>
+          <p>聯繫我們</p>
           <a href="#"><i class="fa fa-dribbble"></i></a>
           <a href="#"><i class="fa fa-instagram"></i></a>
           <a href="#"><i class="fa fa-twitter"></i></a>
@@ -361,6 +258,7 @@ document.getElementById('strHref9').href="javascript:showdiv9();"
   <script src="lib/cubeportfolio/cubeportfolio.js"></script>
   <script src="lib/classie/classie.js"></script>
   <script src="lib/fullpage-menu/fullpage-menu.js"></script>
+  <script src="lib/photostack/photostack.js"></script>
   <script src="lib/superslides/superslides.js"></script>
 
   <!-- Template Main Javascript File -->
