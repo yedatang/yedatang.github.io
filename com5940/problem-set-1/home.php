@@ -1,3 +1,4 @@
+<?php /* Template Name: meun */ ?>
 <?php get_header(); ?>
 
 <body>
@@ -11,6 +12,7 @@
         ☞<a href="bookstores.html" style="color:#8B814C;"><button type="button" class="btn btn btn-light btn-lg">書 店 推 薦</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
         ☞<a href="events.html" style="color:#8B814C;"><button type="button" class="btn btn btn-light btn-lg">書 店 活 動</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
         ☞<a href="market.html" style="color:#8B814C;"><button type="button" class="btn btn btn-light btn-lg">書 店 商 城</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+
       </div><br><br>
 
       <div class="col-lg-4 col-md-4">
